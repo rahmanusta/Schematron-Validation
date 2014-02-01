@@ -1,0 +1,2694 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
+<xsd:schema xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" version="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- ===== Imports ===== -->
+	<xsd:import schemaLocation="UBL-CommonBasicComponents-2.0.xsd" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" />
+	<xsd:import schemaLocation="UnqualifiedDataTypeSchemaModule-2.0.xsd" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" />
+	<xsd:import schemaLocation="UBL-QualifiedDatatypes-2.0.xsd" namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" />
+	<!-- ===== Element Declarations ===== -->
+	<xsd:element name="AccountingCustomerParty" type="CustomerPartyType" />
+	<xsd:element name="AccountingSupplierParty" type="SupplierPartyType" />
+	<xsd:element name="AdditionalDocumentReference" type="DocumentReferenceType" />
+	<xsd:element name="AgentParty" type="PartyType" />
+	<xsd:element name="AllowanceCharge" type="AllowanceChargeType" />
+	<xsd:element name="Attachment" type="AttachmentType" />
+	<xsd:element name="BuyersItemIdentification" type="ItemIdentificationType" />
+	<xsd:element name="CommodityClassification" type="CommodityClassificationType" />
+	<xsd:element name="DocumentReference" type="DocumentReferenceType" />
+	<xsd:element name="DocumentResponse" type="DocumentResponseType" />
+	<xsd:element name="ExternalReference" type="ExternalReferenceType" />
+	<xsd:element name="Communication" type="CommunicationType" />
+	<xsd:element name="Contact" type="ContactType" />
+	<xsd:element name="Country" type="CountryType" />
+	<xsd:element name="DespatchDocumentReference" type="DocumentReferenceType" />
+	<xsd:element name="DigitalSignatureAttachment" type="AttachmentType" />
+	<xsd:element name="InvoiceLine" type="InvoiceLineType" />
+	<xsd:element name="InvoicePeriod" type="PeriodType" />
+	<xsd:element name="Item" type="ItemType" />
+	<xsd:element name="ItemIdentification" type="ItemIdentificationType" />
+	<xsd:element name="LegalMonetaryTotal" type="MonetaryTotalType" />
+	<xsd:element name="LineReference" type="LineReferenceType" />
+	<xsd:element name="LineResponse" type="LineResponseType" />
+	<xsd:element name="ManufacturersItemIdentification" type="ItemIdentificationType" />
+	<xsd:element name="OrderReference" type="OrderReferenceType" />
+	<xsd:element name="OtherCommunication" type="CommunicationType" />
+	<xsd:element name="Party" type="PartyType" />
+	<xsd:element name="PartyIdentification" type="PartyIdentificationType" />
+	<xsd:element name="PartyName" type="PartyNameType" />
+	<xsd:element name="PartyTaxScheme" type="PartyTaxSchemeType" />
+	<xsd:element name="PayeeFinancialAccount" type="FinancialAccountType" />
+	<xsd:element name="PaymentAlternativeExchangeRate" type="ExchangeRateType" />
+	<xsd:element name="PaymentExchangeRate" type="ExchangeRateType" />
+	<xsd:element name="PaymentMeans" type="PaymentMeansType" />
+	<xsd:element name="PaymentTerms" type="PaymentTermsType" />
+	<xsd:element name="Person" type="PersonType" />
+	<xsd:element name="PostalAddress" type="AddressType" />
+	<xsd:element name="Price" type="PriceType" />
+	<xsd:element name="PricingExchangeRate" type="ExchangeRateType" />
+	<xsd:element name="ReceiptDocumentReference" type="DocumentReferenceType" />
+	<xsd:element name="ReceiverParty" type="PartyType" />
+	<xsd:element name="Response" type="ResponseType" />
+	<xsd:element name="SellersItemIdentification" type="ItemIdentificationType" />
+	<xsd:element name="SenderParty" type="PartyType" />
+	<xsd:element name="SignatoryParty" type="PartyType" />
+	<xsd:element name="Signature" type="SignatureType" />
+	<xsd:element name="TaxCategory" type="TaxCategoryType" />
+	<xsd:element name="TaxExchangeRate" type="ExchangeRateType" />
+	<xsd:element name="TaxScheme" type="TaxSchemeType" />
+	<xsd:element name="TaxSubtotal" type="TaxSubtotalType" />
+	<xsd:element name="TaxTotal" type="TaxTotalType" />
+	<!-- ===== Type Definitions ===== -->
+	<!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
+	<xsd:complexType name="AddressType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Address. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Yapılandırılmış adres hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Address</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Mahalle, meydan, bulvar, cadde, sokak, ve küme evlere karşılık gelecek şekilde, standart sayısal eşdeğer olarak yetkili makamlar tarafından verilmiş olan “sabit tanımlama numarası” girilebilecektir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>DetailsKey</ccts:AlternativeBusinessTerms>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Room">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Room. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>İç kapı numarası girilebilecektir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>Room</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>SubPremiseNumber</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"Reception"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:StreetName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Street Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Meydan/bulvar/cadde/sokak/küme evler site adı girilebilecektir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>Street Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>Thoroughfare</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"Kwun Tong Road"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:BuildingName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Building Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Bina ve/veya blok adı girilebilecektir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>Building Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>BuildingName</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"Plot 421"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:BuildingNumber">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Building Number. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Bina veya bloğa ait dış kapı numarası girilebilecektir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>Building Number</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>PremiseNumber</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"388"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:CitySubdivisionName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. City Subdivision Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>İlçe/semt/mahalle adı girilecektir.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>City Subdivision Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:CityName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. City Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>İl adı adı girilecektir.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>City Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>LocalityName</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"Hong Kong"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:PostalZone">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Postal_ Zone. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Posta kod numarası girilebilecektir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Postal</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Zone</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>PostalCodeNumber</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"SW11 4EW" "2500 GG"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Region">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Region. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Kasaba/köy/mezra/mevkii bilgisi girilebilecektir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>Region</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>LocalityName, Economic Zone</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"European Union"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Country">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Address. Country</ccts:DictionaryEntryName>
+							<ccts:Definition>Ülke bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Address</ccts:ObjectClass>
+							<ccts:PropertyTerm>Country</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Country</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AllowanceChargeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Allowance Charge. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>İskonto/Fiyat artırımı hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ChargeIndicator">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Allowance Charge. Charge_ Indicator. Indicator</ccts:DictionaryEntryName>
+							<ccts:Definition>İskonto mu yoksa fiyat artırımı mı olduğunu tanımlar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Charge</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
+							<ccts:DataType>Indicator. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:AllowanceChargeReason">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Allowance Charge. Allowance Charge_ Reason. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>İskonto/fiyat artırımının nedenini metin olarak tanımlar.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Allowance Charge</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Reason</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:MultiplierFactorNumeric">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Allowance Charge. Multiplier_ Factor. Numeric</ccts:DictionaryEntryName>
+							<ccts:Definition>İskonto/fiyat artırımını hesaplamak için ana miktara uygulanan çarpan.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Multiplier</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Factor</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+							<ccts:DataType>Numeric. Type</ccts:DataType>
+							<ccts:Examples>0.20</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:Amount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Allowance Charge. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>İskonto/fiyat artırımı miktarı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
+							<ccts:PropertyTerm>Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+							<ccts:Examples>35,23</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:BaseAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Allowance Charge. Base_ Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>İskonto/fiyat artırımı miktarını hesaplamak için çarpanın uygulandığı ana miktar.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Base</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AttachmentType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Attachment. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Ekli doküman hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Attachment</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" maxOccurs="1" ref="ExternalReference">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Attachment. External Reference</ccts:DictionaryEntryName>
+							<ccts:Definition>An attached document, externally referred to, referred to in the MIME location, or embedded.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Attachment</ccts:ObjectClass>
+							<ccts:PropertyTerm>External Reference</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>External Reference</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" maxOccurs="1" ref="cbc:EmbeddedDocumentBinaryObject">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Attachment. Embedded_ Document. Binary Object</ccts:DictionaryEntryName>
+							<ccts:Definition>BLOB formatında gömülü dosya içerir.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Attachment</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Embedded</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Document</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Binary Object</ccts:RepresentationTerm>
+							<ccts:DataType>Binary Object. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CommodityClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Commodity Classification. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Ürün kodlaması hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Commodity Classification</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ItemClassificationCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Commodity Classification. Item Classification Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Ticaret ürün sınıflandırması kodu.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Commodity Classification</ccts:ObjectClass>
+							<ccts:PropertyTerm>Item Classification Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>UN/SPSC Code</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>"3440234"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CommunicationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Communication. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>İletişim yöntemi hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Communication</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ChannelCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Communication. Channel Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>İletişim yöntemi kodu.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Communication</ccts:ObjectClass>
+							<ccts:PropertyTerm>Channel Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Channel_ Code. Type</ccts:DataType>
+							<ccts:Examples>Phone Fax Email</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Channel">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Communication. Channel. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>İletişim yöntemi metin tanımı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Communication</ccts:ObjectClass>
+							<ccts:PropertyTerm>Channel</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+							<ccts:Examples>Skype</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:Value">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Communication. Value. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>İletişim değeri, örneğin telefon numarası, faks numarası, e-mail adresi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Communication</ccts:ObjectClass>
+							<ccts:PropertyTerm>Value</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+							<ccts:Examples>"+44 1 2345 6789" "president@whitehouse.com"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContactType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Contact. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>İletişim kurulabilinecek kişi yada kurum bölümü hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Contact</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:Telephone">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Contact. Telephone. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>İletişim kurulacak kişinin telefon numarası.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Contact</ccts:ObjectClass>
+							<ccts:PropertyTerm>Telephone</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Telefax">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Contact. Telefax. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>İletişim kurulacak kişinin fax numarası.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Contact</ccts:ObjectClass>
+							<ccts:PropertyTerm>Telefax</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:ElectronicMail">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Contact. Electronic_ Mail. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>İletişim kurulacak kişinin elektronik posta adresi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Contact</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Electronic</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Mail</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" ref="OtherCommunication">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Contact. Other_ Communication. Communication</ccts:DictionaryEntryName>
+							<ccts:Definition>Diğer iletişim yolları bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..n</ccts:Cardinality>
+							<ccts:ObjectClass>Contact</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Other</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Communication</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Communication</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CountryType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Country. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Jeopolitik ülke hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Country</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:IdentificationCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Country. Identification Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Ülkeyi tanımlayan kod.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Country</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identification Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Country Identification_ Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:Name">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Country. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Ülkenin adı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Country</ccts:ObjectClass>
+							<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:Examples>â€œSOUTH AFRICAâ€</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CustomerPartyType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Customer Party. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Müşteri tarafı hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Customer Party</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Party">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Customer Party. Party</ccts:DictionaryEntryName>
+							<ccts:Definition>Parti bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Customer Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Document Response. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Herhangi bir dokümana verilecek cevabı tanımlar.</ccts:Definition>
+					<ccts:ObjectClass>Document Response</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Response">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Response. Response</ccts:DictionaryEntryName>
+							<ccts:Definition>Cevap bilgileri.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Document Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Response</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Response</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="DocumentReference">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Response. Document Reference</ccts:DictionaryEntryName>
+							<ccts:Definition>Cevap verilen dokümana referansın tutulduğu bölüm.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Document Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" ref="LineResponse">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Response. Line Response</ccts:DictionaryEntryName>
+							<ccts:Definition>Satır bazlı doküman cevabı.</ccts:Definition>
+							<ccts:Cardinality>0..n</ccts:Cardinality>
+							<ccts:ObjectClass>Document Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Line Response</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Line Response</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Document Reference. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Bir doküman içinden ilişkilendirilen diğer doküman hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Document Reference</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Reference. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>İlişkilendirilen dokümanı tanımlar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Document Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>"PO-001" "3333-44-123"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueDate">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Reference. Issue Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>Irsaliye tarihi veya dokuman tarihi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Document Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:DocumentTypeCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Reference. Document Type Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Doküman tipi kodunu tanımlar.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Document Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Document Type Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:DocumentType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Reference. Document Type. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Doküman tipini tanımlar.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Document Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Document Type</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="Attachment">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Document Reference. Attachment</ccts:DictionaryEntryName>
+							<ccts:Definition>Ekli doküman bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Document Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Attachment</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Attachment</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ExchangeRateType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Exchange Rate. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Döviz kuru hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Exchange Rate</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:SourceCurrencyCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Exchange Rate. Source_ Currency Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Kaynak para birimi kodu.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Exchange Rate</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Source</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Currency_ Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:TargetCurrencyCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Exchange Rate. Target_ Currency Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Hedef para birimi kodu.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Exchange Rate</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Target</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Currency_ Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:CalculationRate">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Exchange Rate. Calculation Rate. Rate</ccts:DictionaryEntryName>
+							<ccts:Definition>Döviz kuru.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Exchange Rate</ccts:ObjectClass>
+							<ccts:PropertyTerm>Calculation Rate</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Rate</ccts:RepresentationTerm>
+							<ccts:DataType>Rate. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Date">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Exchange Rate. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>Kurun tarihi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Exchange Rate</ccts:ObjectClass>
+							<ccts:PropertyTerm>Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ExternalReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>External Reference. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information directly relating to an external reference i.e. a document stored at a remote location.</ccts:Definition>
+					<ccts:ObjectClass>External Reference</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:URI">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>External Reference. URI. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The Uniform Resource Identifier (URI) that identifies where the external document is located.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>External Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>URI</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!--	<xsd:element ref="cbc:DocumentHash" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>External Reference. Document Hash. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Specifies the hash code for the externally stored document.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>External Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Document Hash</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ExpiryDate" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>External Reference. Expiry Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>The date on which the document can no longer be found on the URI.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>External Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Expiry Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ExpiryTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>External Reference. Expiry Time. Time</ccts:DictionaryEntryName>
+							<ccts:Definition>The time on which the document can no longer be found on the URI.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>External Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Expiry Time</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
+							<ccts:DataType>Time. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element> -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FinancialAccountType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Financial Account. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Finansal Hesap hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Financial Account</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Financial Account. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Finansal Hesap için tanımlayıcı, banka hesap numarası.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Financial Account</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>SWIFT(BIC) and IBAN are defined in ISO 9362 and ISO 13616.</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:CurrencyCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Financial Account. Currency Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Finansal hesabın hangi para biriminde tutulduğunun kod olarak tanımı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Financial Account</ccts:ObjectClass>
+							<ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Currency_ Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:PaymentNote">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Financial Account. Payment_ Note. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Serbest metin alanı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Financial Account</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Note</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="InvoiceLineType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Invoice Line. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Kalem satırı hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Kalemi tanımlar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Note">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Note. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Kalem hakkında serbest metin alanı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Note</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:InvoicedQuantity">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Invoiced_ Quantity. Quantity</ccts:DictionaryEntryName>
+							<ccts:Definition>Kalemin adet sayısı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Invoiced</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Quantity</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm>
+							<ccts:DataType>Quantity. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:LineExtensionAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Line Extension Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergiler hariç, iskonto/fiyat artırımı dahil toplam net meblağ.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Line Extension Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="AllowanceCharge">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Allowance Charge</ccts:DictionaryEntryName>
+							<ccts:Definition>İskonto/fiyat artımı bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="TaxTotal">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Tax Total</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi toplamı bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Total</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Tax Total</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Item">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Item</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün/Servisya bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Item</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Item</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Price">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Invoice Line. Price</ccts:DictionaryEntryName>
+							<ccts:Definition>Fiyat bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Price</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Price</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ItemType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Item. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Ürün/Servis hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Item</ccts:ObjectClass>
+					<ccts:AlternativeBusinessTerms>article, product, goods item</ccts:AlternativeBusinessTerms>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:Description">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Description. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün/Servis hakkında bilgi vermek için serbest metin alanı .</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTerm>Description</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:Name">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün/Servis için verilen kısa ad, örneğin ürün/servisin katologdaki adı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:BrandName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Brand Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün/Servisnın marka adı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTerm>Brand Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:Examples>Coca-Cola</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:ModelName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Model Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün/Servisnın model adı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTerm>Model Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:Examples>"VW Beetle"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="BuyersItemIdentification">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Buyers_ Item Identification. Item Identification</ccts:DictionaryEntryName>
+							<ccts:Definition>Alıcının sistemine göre ürün/servis tanımlama bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Buyers</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Item Identification</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Item Identification</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="SellersItemIdentification">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Sellers_ Item Identification. Item Identification</ccts:DictionaryEntryName>
+							<ccts:Definition>Satıcının sistemine göre ürün/servis tanımlama bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Sellers</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Item Identification</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Item Identification</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="ManufacturersItemIdentification">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Manufacturers_ Item Identification. Item Identification</ccts:DictionaryEntryName>
+							<ccts:Definition>Üreticinin sistemine göre ürün/servis tanımlama bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Manufacturers</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Item Identification</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Item Identification</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="CommodityClassification">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item. Commodity Classification</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün sınıflandırma sistemi bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item</ccts:ObjectClass>
+							<ccts:PropertyTerm>Commodity Classification</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Commodity Classification</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ItemIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Item Identification. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Ürün/Servis tanımlaması hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Item Identification</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item Identification. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün/Servis için tanımlayıcı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Item Identification</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>"CUST001" "3333-44-123"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LineReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Line Reference. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Bir dokümandaki bir satıra referans.</ccts:Definition>
+					<ccts:ObjectClass>Line Reference</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:LineID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Line Reference. Line Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Referans edilen satır numarası.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Line Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Line Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="DocumentReference">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Line Reference. Document Reference</ccts:DictionaryEntryName>
+							<ccts:Definition>Referans edilen doküman.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Line Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LineResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Line Response. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Bir dokümandaki satıra cevap vermek için kullanılır.</ccts:Definition>
+					<ccts:ObjectClass>Line Response</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="LineReference">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Line Response. Line Reference</ccts:DictionaryEntryName>
+							<ccts:Definition>Satır referans bilgilerinin tutulduğu bölüm.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Line Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Line Reference</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Line Reference</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" ref="Response">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Line Response. Response</ccts:DictionaryEntryName>
+							<ccts:Definition>Cevap bilgilerinin bulunduğu bölüm.</ccts:Definition>
+							<ccts:Cardinality>1..n</ccts:Cardinality>
+							<ccts:ObjectClass>Line Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Response</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Response</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MonetaryTotalType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Monetary Total. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Parasal toplam hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:LineExtensionAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Monetary Total. Line Extension Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergiler, iskonto ve fiyat artırımı hariç toplam miktar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+							<ccts:PropertyTerm>Line Extension Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:TaxExclusiveAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Monetary Total. Tax Exclusive Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergiler hariç, iskonto ve fiyat artırımı dahil toplam miktar (Vergi Matrahı).</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Exclusive Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:TaxInclusiveAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Monetary Total. Tax Inclusive Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergiler, iskonto ve fiyat artırımı dahil toplam miktar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Inclusive Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:AllowanceTotalAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Monetary Total. Allowance Total Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Toplam iskonto miktarı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+							<ccts:PropertyTerm>Allowance Total Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:ChargeTotalAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Monetary Total. Charge Total Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Toplam fiyat artırımı miktarı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+							<ccts:PropertyTerm>Charge Total Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:PayableRoundingAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Monetary Total. Payable_ Rounding Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Toplam yuvarlama miktarı ya da sonraki aya devir bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Payable</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Rounding Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:PayableAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Monetary Total. Payable_ Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Toplam ödenecek miktar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Payable</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OrderReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Order Reference. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Sipariş dokümanı bilgisini içerir.</ccts:Definition>
+					<ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Reference. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Sipariş dokümanı numarası.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>"PO-001" "3333-44-123"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueDate">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Reference. Issue Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>Sipariş tarihi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="DocumentReference">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Reference. Document Reference</ccts:DictionaryEntryName>
+							<ccts:Definition>Sipariş dokümanı referansı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Reference</ccts:ObjectClass>
+							<ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartyType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Party. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Parti (Taraf) hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Party</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:WebsiteURI">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Website_ URI. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Partinin Web Sitesi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Website</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>URI</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" ref="PartyIdentification">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Party Identification</ccts:DictionaryEntryName>
+							<ccts:Definition>Parti tanımı bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1..n</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Party Identification</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party Identification</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="PartyName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Party Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Parti adı bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Party Name</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party Name</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PostalAddress">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Postal_ Address. Address</ccts:DictionaryEntryName>
+							<ccts:Definition>Partinin adresi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Postal</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Address</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Address</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="PartyTaxScheme">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Party Tax Scheme</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi dairesi bilgisinin bulunduğu bölüm.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Party Tax Scheme</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party Tax Scheme</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="Contact">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Contact</ccts:DictionaryEntryName>
+							<ccts:Definition>İletişim bilgisi.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Contact</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Contact</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="Person">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Person</ccts:DictionaryEntryName>
+							<ccts:Definition>Kişi bilgisi (Partinin şahıs olma durumu ya da o partide kontakt kişisi).</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Person</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Person</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="AgentParty">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Agent_ Party. Party</ccts:DictionaryEntryName>
+							<ccts:Definition>Bir firmanın şubelerinin ya da diğer bağlı kollarının fatura kesmesi durumunda ilgili firma bilgisini içeren bölüm.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Agent</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartyIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Party Identification. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Parti tanımı hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Party Identification</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party Identification. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Partiyi tanımlar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Party Identification</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartyNameType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Party Name. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Partinin adı hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Party Name</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:Name">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Partinin adı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Party Name</ccts:ObjectClass>
+							<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:Examples>"Microsoft"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartyTaxSchemeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Party Tax Scheme. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information about a party's Tax Scheme.</ccts:Definition>
+					<ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="TaxScheme">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party Tax Scheme. Tax Scheme</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi dairesi bilgisinin bulunduğu bölüm.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Party Tax Scheme</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Scheme</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Tax Scheme</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PaymentMeansType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Payment Means. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Ödeme şekilleri hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:PaymentMeansCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Means. Payment Means Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Ödeme şeklinin kod olarak tanımlanması.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+							<ccts:PropertyTerm>Payment Means Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Payment Means_ Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:PaymentDueDate">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Means. Payment Due Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>Ödemenin yapılacağı son gün.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+							<ccts:PropertyTerm>Payment Due Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:PaymentChannelCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Means. Payment Channel Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Ödeme kanalının kod olarak tanımlanması.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+							<ccts:PropertyTerm>Payment Channel Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:InstructionNote">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Means. Instruction_ Note. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Ödeme için serbest metin alanı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Instruction</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Note</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="PayeeFinancialAccount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Means. Payee_ Financial Account. Financial Account</ccts:DictionaryEntryName>
+							<ccts:Definition>Ödeyenin finansal hesabına ilişki.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Financial Account</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Financial Account</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PaymentTermsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Payment Terms. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Ödeme koşulları hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Payment Terms</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:Note">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Terms. Note. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Ödeme koşullarına için serbest metin alanı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Terms</ccts:ObjectClass>
+							<ccts:PropertyTerm>Note</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:PenaltySurchargePercent">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Terms. Penalty_ Surcharge Percent. Percent</ccts:DictionaryEntryName>
+							<ccts:Definition>Geç ödeme için uygulanacak ceza oranı (yüzde).</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Terms</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Penalty</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Surcharge Percent</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Percent</ccts:RepresentationTerm>
+							<ccts:DataType>Percent. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Amount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Payment Terms. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Ödeme koşulları için ödeme miktarı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Payment Terms</ccts:ObjectClass>
+							<ccts:PropertyTerm>Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PeriodType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Period. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Dönem hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Period</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:StartDate">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Period. Start Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>Dönemin başlangıc zamanı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Period</ccts:ObjectClass>
+							<ccts:PropertyTerm>Start Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:EndDate">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Period. End Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>Dönemin bitiş zamanı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Period</ccts:ObjectClass>
+							<ccts:PropertyTerm>End Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:DurationMeasure">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Period. Duration. Measure</ccts:DictionaryEntryName>
+							<ccts:Definition>Dönemin süresi; ISO 8601.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Period</ccts:ObjectClass>
+							<ccts:PropertyTerm>Duration</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Measure</ccts:RepresentationTerm>
+							<ccts:DataType>Measure. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Description">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Period. Description. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Dönemin tanımı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Period</ccts:ObjectClass>
+							<ccts:PropertyTerm>Description</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PersonType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Person. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Kişi hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Person</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:FirstName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Person. First_ Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Kişinin ilk adı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Person</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>First</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:FamilyName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Person. Family_ Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Kişinin soyadı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Person</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Family</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Title">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Person. Title. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Kişiye hitap şekli, ünvan, örn.,Bay, Bayan, Dr.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Person</ccts:ObjectClass>
+							<ccts:PropertyTerm>Title</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:MiddleName">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Person. Middle_ Name. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Kişinin diğer ad(lar)ı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Person</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Middle</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:NameSuffix">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Person. Name Suffix. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Kişi adına ön ek, örn., PhD.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Person</ccts:ObjectClass>
+							<ccts:PropertyTerm>Name Suffix</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PriceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Price. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Fiyat hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Price</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:PriceAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Price. Price Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Fiyat miktarı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Price</ccts:ObjectClass>
+							<ccts:PropertyTerm>Price Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>unit price</ccts:AlternativeBusinessTerms>
+							<ccts:Examples>23.45</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Response. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Cevap bilgilerinin bulunduğu bölüm.</ccts:Definition>
+					<ccts:ObjectClass>Response</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ReferenceID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Response. Reference. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Cevabı tanımlar.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Reference</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:ResponseCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Response. Response Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Cevap kodu.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Response Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" maxOccurs="unbounded" ref="cbc:Description">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Response. Description. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Cevabın serbest metin tanımı.</ccts:Definition>
+							<ccts:Cardinality>0..n</ccts:Cardinality>
+							<ccts:ObjectClass>Response</ccts:ObjectClass>
+							<ccts:PropertyTerm>Description</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SignatureType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Signature. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>İmza hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Signature</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Signature. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>İmza için tanımlayıcı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Signature</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="SignatoryParty">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Signature. Signatory_ Party. Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to the signing Party.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Signature</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Signatory</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="DigitalSignatureAttachment">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Signature. Digital Signature_ Attachment. Attachment</ccts:DictionaryEntryName>
+							<ccts:Definition>Gerçek kodlanmış imza (örn., in XMLDSIG format).</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Signature</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Digital Signature</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Attachment</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Attachment</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SupplierPartyType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Supplier Party. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Sağlayıcı parti (taraf) hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Supplier Party</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Party">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Supplier Party. Party</ccts:DictionaryEntryName>
+							<ccts:Definition>Parti bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Supplier Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TaxCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Tax Category. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Vergi kategorisi elemanı hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Tax Category</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:TaxExemptionReason">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Category. Tax Exemption Reason. Text</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi muhafiyet ve istisna sebebinin bildirildiği alan.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Category</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Exemption Reason</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TaxScheme">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Category. Tax Scheme</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi şeması bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Category</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Scheme</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Tax Scheme</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TaxSchemeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Tax Scheme. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Vergi şeması hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Tax Scheme</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:Name">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Scheme. Name</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi dairesi adı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Scheme</ccts:ObjectClass>
+							<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+							<ccts:DataType>Name. Type</ccts:DataType>
+							<ccts:Examples>"Value Added Tax", "Wholesale Tax", "Sales Tax", "State Tax"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:TaxTypeCode">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Scheme. Tax Type Code. Code</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi tipini kod olarak tanımlar.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Scheme</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Type Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+							<ccts:Examples>"Consumption", "Sales"</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TaxSubtotalType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Tax Subtotal. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Belirli bir vergi şeması içindeki vergi kategorisi için aratoplam hakkında bilgi, örneğin KDV içindeki standart oran.</ccts:Definition>
+					<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" ref="cbc:TaxableAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Taxable_ Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergilendirilecek net miktar (Matrah).</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Taxable</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:TaxAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Tax Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Harici olarak belirtilmiş vergi miktarı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:CalculationSequenceNumeric">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Calculation Sequence. Numeric</ccts:DictionaryEntryName>
+							<ccts:Definition>Birden çok vergi uygulandığında sıra numarası.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTerm>Calculation Sequence</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+							<ccts:DataType>Numeric. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:TransactionCurrencyTaxAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Transaction Currency_ Tax Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi miktarının faturadaki para cinsinden değeri.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Transaction Currency</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Tax Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:Percent">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Percent</ccts:DictionaryEntryName>
+							<ccts:Definition>Yüzde cinsinden vergi oranı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTerm>Percent</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Percent</ccts:RepresentationTerm>
+							<ccts:DataType>Percent. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:BaseUnitMeasure">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Base Unit Measure. Measure</ccts:DictionaryEntryName>
+							<ccts:Definition>Birim başına vergi uygulandığı durumda ne kadarlık bir birim alındığını hakkında bilgi veriyor.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTerm>Base Unit Measure</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Measure</ccts:RepresentationTerm>
+							<ccts:DataType>Measure. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" ref="cbc:PerUnitAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Per Unit_ Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Ürün/Servis başına uygulanan vergi oranı.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Per Unit</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TaxCategory">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Subtotal. Tax Category</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi kategorisi bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Category</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Tax Category</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TaxTotalType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Tax Total. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Vergi toplamı hakkında bilgi.</ccts:Definition>
+					<ccts:ObjectClass>Tax Total</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:TaxAmount">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Total. Tax Amount. Amount</ccts:DictionaryEntryName>
+							<ccts:Definition>Belirli bir vergi şeması için toplam vergi miktarı, örneğin KDV için aratoplamların toplamı.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Total</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" ref="TaxSubtotal">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Tax Total. Tax Subtotal</ccts:DictionaryEntryName>
+							<ccts:Definition>Vergi aratoplamı bilgisi.</ccts:Definition>
+							<ccts:Cardinality>1..n</ccts:Cardinality>
+							<ccts:ObjectClass>Tax Total</ccts:ObjectClass>
+							<ccts:PropertyTerm>Tax Subtotal</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Tax Subtotal</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
+<!-- ===== Copyright Notice ===== -->
+<!--
+OASIS takes no position regarding the validity or scope of any 
+intellectual property or other rights that might be claimed to pertain 
+to the implementation or use of the technology described in this 
+document or the extent to which any license under such rights 
+might or might not be available; neither does it represent that it has 
+made any effort to identify any such rights. Information on OASIS's 
+procedures with respect to rights in OASIS specifications can be 
+found at the OASIS website. Copies of claims of rights made 
+available for publication and any assurances of licenses to be made 
+available, or the result of an attempt made to obtain a general 
+license or permission for the use of such proprietary rights by 
+implementors or users of this specification, can be obtained from 
+the OASIS Executive Director.
+
+OASIS invites any interested party to bring to its attention any 
+copyrights, patents or patent applications, or other proprietary 
+rights which may cover technology that may be required to 
+implement this specification. Please address the information to the 
+OASIS Executive Director.
+
+Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
+
+This document and translations of it may be copied and furnished to 
+others, and derivative works that comment on or otherwise explain 
+it or assist in its implementation may be prepared, copied, 
+published and distributed, in whole or in part, without restriction of 
+any kind, provided that the above copyright notice and this 
+paragraph are included on all such copies and derivative works. 
+However, this document itself may not be modified in any way, 
+such as by removing the copyright notice or references to OASIS, 
+except as needed for the purpose of developing OASIS 
+specifications, in which case the procedures for copyrights defined 
+in the OASIS Intellectual Property Rights document must be 
+followed, or as required to translate it into languages other than 
+English. 
+
+The limited permissions granted above are perpetual and will not be 
+revoked by OASIS or its successors or assigns. 
+
+This document and the information contained herein is provided on 
+an "AS IS" basis and OASIS DISCLAIMS ALL WARRANTIES, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY 
+WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
+WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+PARTICULAR PURPOSE.
+-->

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:clm54217="urn:un:unece:uncefact:codelist:specification:54217:2001" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+	<!-- ===== Imports ===== -->
+	<xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+<xsd:import namespace="urn:un:unece:uncefact:codelist:specification:54217:2001" schemaLocation="CodeList_CurrencyCode_ISO_7_04.xsd"/>	
+<!-- ===== Type Definitions ===== -->
+	<xsd:complexType name="ChannelCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:DictionaryEntryName>Channel_ Code. Type</ccts:DictionaryEntryName>
+					<ccts:Version>2.0</ccts:Version>
+					<ccts:Definition>The set of possible ways in which communication can be made (eg. Phone, email, etc).</ccts:Definition>
+					<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+					<ccts:QualifierTerm>Channel</ccts:QualifierTerm>
+					<ccts:UniqueID/>
+					<ccts:UsageRule>Used under the terms of the UNECE  policy stated at http://www.unece.org/ece_legal.htm.</ccts:UsageRule>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType">
+				<xsd:attribute name="listID" type="xsd:normalizedString" use="optional" default="UN/ECE 3155">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Channel_ Code List. Identifier</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listAgencyName" type="xsd:string" use="optional" default="United Nations Economic Commission for Europe">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Channel_ Code List. Agency Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listName" type="xsd:string" use="optional" default="Communication Address Code Qualifier">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Channel_ Code List. Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listVersionID" type="xsd:normalizedString" use="optional" default="D03A">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Channel_ Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>Identifies the Directory of the UN/EDIFACT code list.</ccts:Definition>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="CountryIdentificationCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:DictionaryEntryName>Country Identification_ Code. Type</ccts:DictionaryEntryName>
+					<ccts:Version>2.0</ccts:Version>
+					<ccts:Definition>The set of countries of the world.</ccts:Definition>
+					<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+					<ccts:QualifierTerm>Country Identification</ccts:QualifierTerm>
+					<ccts:UniqueID/>
+					<ccts:UsageRule>Derived from the ISO 3166-1-alpha-2 code elements used under the terms of the ISO policy stated at http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html.</ccts:UsageRule>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType">
+				<xsd:attribute name="listID" type="xsd:normalizedString" use="optional" default="ISO3166-1">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Country Identification_ Code List. Identifier</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listAgencyName" type="xsd:string" use="optional" default="United Nations Economic Commission for Europe">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Country Identification_ Code List. Agency Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listName" type="xsd:string" use="optional" default="Country">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Country Identification_ Code List. Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listVersionID" type="xsd:normalizedString" use="optional" default="0.3">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Country Identification_ Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="CurrencyCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:DictionaryEntryName>Currency_ Code. Type</ccts:DictionaryEntryName>
+					<ccts:Version>2.0</ccts:Version>
+					<ccts:Definition>The set of world currencies.</ccts:Definition>
+					<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+					<ccts:QualifierTerm>Currency</ccts:QualifierTerm>
+					<ccts:UniqueID/>
+					<ccts:UsageRule>Derived from the ISO 4217 currency code list and used under the terms of the ISO policy stated at 
+http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageRule>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clm54217:CurrencyCodeContentType">
+				<xsd:attribute name="listID" type="xsd:normalizedString" use="optional" default="ISO 4217 Alpha">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Currency_ Code List. Identifier</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listAgencyName" type="xsd:string" use="optional" default="United Nations Economic Commission for Europe">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Currency_ Code List. Agency Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listName" type="xsd:string" use="optional" default="Currency">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Currency_ Code List. Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listVersionID" type="xsd:normalizedString" use="optional" default="2001">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Currency_ Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PaymentMeansCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:DictionaryEntryName>Payment Means_ Code. Type</ccts:DictionaryEntryName>
+					<ccts:Version>2.0</ccts:Version>
+					<ccts:Definition>The set of valid means of paying the debt incurred.</ccts:Definition>
+					<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+					<ccts:QualifierTerm>Payment Means</ccts:QualifierTerm>
+					<ccts:UniqueID/>
+					<ccts:UsageRule>Used under the terms of the UNECE  policy stated at http://www.unece.org/ece_legal.htm.</ccts:UsageRule>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType">
+				<xsd:attribute name="listID" type="xsd:normalizedString" use="optional" default="UN/ECE 4461">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Payment Means_ Code List. Identifier</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listAgencyName" type="xsd:string" use="optional" default="United Nations Economic Commission for Europe">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Payment Means_ Code List. Agency Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listName" type="xsd:string" use="optional" default="Payment Means">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Payment Means_ Code List. Name. Text</ccts:Name>
+							<ccts:Definition/>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="listVersionID" type="xsd:normalizedString" use="optional" default="D03A">
+					<xsd:annotation>
+						<xsd:documentation>
+							<ccts:Name>Payment Means_ Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>Identifies the Directory of the UN/EDIFACT code list.</ccts:Definition>
+							<ccts:PrimitiveType>String</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>
+<!-- ===== Copyright Notice ===== -->
+<!--
+  OASIS takes no position regarding the validity or scope of any 
+  intellectual property or other rights that might be claimed to pertain 
+  to the implementation or use of the technology described in this 
+  document or the extent to which any license under such rights 
+  might or might not be available; neither does it represent that it has 
+  made any effort to identify any such rights. Information on OASIS's 
+  procedures with respect to rights in OASIS specifications can be 
+  found at the OASIS website. Copies of claims of rights made 
+  available for publication and any assurances of licenses to be made 
+  available, or the result of an attempt made to obtain a general 
+  license or permission for the use of such proprietary rights by 
+  implementors or users of this specification, can be obtained from 
+  the OASIS Executive Director.
+
+  OASIS invites any interested party to bring to its attention any 
+  copyrights, patents or patent applications, or other proprietary 
+  rights which may cover technology that may be required to 
+  implement this specification. Please address the information to the 
+  OASIS Executive Director.
+  
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
+
+  This document and translations of it may be copied and furnished to 
+  others, and derivative works that comment on or otherwise explain 
+  it or assist in its implementation may be prepared, copied, 
+  published and distributed, in whole or in part, without restriction of 
+  any kind, provided that the above copyright notice and this 
+  paragraph are included on all such copies and derivative works. 
+  However, this document itself may not be modified in any way, 
+  such as by removing the copyright notice or references to OASIS, 
+  except as needed for the purpose of developing OASIS 
+  specifications, in which case the procedures for copyrights defined 
+  in the OASIS Intellectual Property Rights document must be 
+  followed, or as required to translate it into languages other than 
+  English. 
+
+  The limited permissions granted above are perpetual and will not be 
+  revoked by OASIS or its successors or assigns. 
+
+  This document and the information contained herein is provided on 
+  an "AS IS" basis and OASIS DISCLAIMS ALL WARRANTIES, 
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY 
+  WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
+  WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+  PARTICULAR PURPOSE.
+-->

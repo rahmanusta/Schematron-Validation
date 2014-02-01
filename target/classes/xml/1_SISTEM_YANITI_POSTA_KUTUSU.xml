@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sh:StandardBusinessDocument
+        xsi:schemaLocation="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader PackageProxy.xsd"
+        xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+        xmlns:ef="http://www.efatura.gov.tr/package-namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <sh:StandardBusinessDocumentHeader>
+        <sh:HeaderVersion>1.0</sh:HeaderVersion>
+        <sh:Sender>
+            <sh:Identifier>urn:mail:defaultpk@gib.gov.tr</sh:Identifier>
+            <sh:ContactInformation>
+                <sh:Contact>9999999999</sh:Contact>
+                <sh:ContactTypeIdentifier>VKN_TCKN</sh:ContactTypeIdentifier>
+                <!--VKN/TCKN-->
+            </sh:ContactInformation>
+        </sh:Sender>
+        <sh:Receiver>
+            <sh:Identifier>urn:mail:defaultgb@gib.gov.tr</sh:Identifier>
+            <sh:ContactInformation>
+                <sh:Contact>9999999999</sh:Contact>
+                <sh:ContactTypeIdentifier>VKN_TCKN</sh:ContactTypeIdentifier>
+                <!--VKN/TCKN-->
+            </sh:ContactInformation>
+        </sh:Receiver>
+        <sh:DocumentIdentification>
+            <sh:Standard>UBLTR</sh:Standard>
+            <sh:TypeVersion>1.0</sh:TypeVersion>
+            <sh:InstanceIdentifier>159159CF-4E2E-4868-BA42-CD0459DA824F</sh:InstanceIdentifier>
+            <sh:Type>SYSTEMENVELOPE</sh:Type>
+            <sh:CreationDateAndTime>2013-06-19T16:13:31</sh:CreationDateAndTime>
+        </sh:DocumentIdentification>
+    </sh:StandardBusinessDocumentHeader>
+    <ef:Package>
+        <Elements>
+            <ElementType>APPLICATIONRESPONSE</ElementType>
+            <ElementCount>1</ElementCount>
+            <ElementList>
+                <ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                     xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                     xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2 ../xsd/maindoc/UBLTR-ApplicationResponse-2.0.xsd">
+                    <cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+                    <cbc:CustomizationID>TR1.0</cbc:CustomizationID>
+                    <cbc:ProfileID>UBL-TR-PROFILE-1</cbc:ProfileID>
+                    <cbc:ID>DC84D652-EE2B-426E-965D-95727921E759</cbc:ID>
+                    <cbc:UUID>092AEB7E-FF9B-43A2-A2C0-F024CAEBAB09</cbc:UUID>
+                    <cbc:IssueDate>2013-06-19</cbc:IssueDate>
+                    <cbc:IssueTime>16:13:31</cbc:IssueTime>
+                    <cac:SenderParty>
+                        <cac:PartyIdentification>
+                            <cbc:ID schemeID="VKN">9999999999</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PostalAddress>
+                            <cbc:StreetName></cbc:StreetName>
+                            <cbc:CitySubdivisionName></cbc:CitySubdivisionName>
+                            <cbc:CityName></cbc:CityName>
+                            <cbc:PostalZone></cbc:PostalZone>
+                            <cac:Country>
+                                <cbc:IdentificationCode>TR</cbc:IdentificationCode>
+                                <cbc:Name>Türkiye</cbc:Name>
+                            </cac:Country>
+                        </cac:PostalAddress>
+                    </cac:SenderParty>
+                    <cac:ReceiverParty>
+                        <cac:PartyIdentification>
+                            <cbc:ID schemeID="VKN">9999999999</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PostalAddress>
+                            <cbc:StreetName></cbc:StreetName>
+                            <cbc:CitySubdivisionName></cbc:CitySubdivisionName>
+                            <cbc:CityName></cbc:CityName>
+                            <cbc:PostalZone></cbc:PostalZone>
+                            <cac:Country>
+                                <cbc:IdentificationCode>TR</cbc:IdentificationCode>
+                                <cbc:Name>Türkiye</cbc:Name>
+                            </cac:Country>
+                        </cac:PostalAddress>
+                    </cac:ReceiverParty>
+                    <cac:DocumentResponse>
+                        <cac:Response>
+                            <!-- cbc:ReferenceID = Response ID -->
+                            <cbc:ReferenceID>66300803-EBCF-45DB-A6F6-A4F2FF18BD2A</cbc:ReferenceID>
+                            <!-- S_APR = System application response -->
+                            <!-- B_APR = Business application response -->
+                            <cbc:ResponseCode>S_APR</cbc:ResponseCode>
+                            <cbc:Description>APPLICATIONRESPONSE</cbc:Description>
+                        </cac:Response>
+                        <cac:DocumentReference>
+                            <!-- cbc:ID = Zarf ID -->
+                            <cbc:ID>e002da78-223f-438c-addb-16badeb047b5</cbc:ID>
+                            <cbc:IssueDate>2013-06-19</cbc:IssueDate>
+                            <cbc:DocumentTypeCode>SENDERENVELOPE</cbc:DocumentTypeCode>
+                            <cbc:DocumentType>SENDERENVELOPE</cbc:DocumentType>
+                        </cac:DocumentReference>
+                        <cac:LineResponse>
+                            <cac:LineReference>
+                                <!-- cbc:LineID = Giden Zarf.xml satir no -->
+                                <cbc:LineID>0</cbc:LineID>
+                                <cac:DocumentReference>
+                                    <!-- cbc:ID = Zarf ID -->
+                                    <cbc:ID>e002da78-223f-438c-addb-16badeb047b5</cbc:ID>
+                                    <cbc:IssueDate>2013-06-19</cbc:IssueDate>
+                                </cac:DocumentReference>
+                            </cac:LineReference>
+                            <cac:Response>
+                                <!-- cbc:ReferenceID = Line Response ID -->
+                                <cbc:ReferenceID>ABC763A7-E83E-4F99-9DED-6AB16606B94E</cbc:ReferenceID>
+                                <cbc:ResponseCode>1200</cbc:ResponseCode>
+                                <cbc:Description>BASARIYLA ISLENDI</cbc:Description>
+                            </cac:Response>
+                        </cac:LineResponse>
+                    </cac:DocumentResponse>
+                </ApplicationResponse>
+            </ElementList>
+        </Elements>
+    </ef:Package>
+</sh:StandardBusinessDocument>

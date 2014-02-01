@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sh:StandardBusinessDocument
+        xsi:schemaLocation="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader PackageProxy.xsd"
+        xmlns:sh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+        xmlns:ef="http://www.efatura.gov.tr/package-namespace"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <sh:StandardBusinessDocumentHeader>
+        <sh:HeaderVersion>1.0</sh:HeaderVersion>
+        <sh:Sender>
+            <sh:Identifier>GIB</sh:Identifier>
+            <sh:ContactInformation>
+                <sh:Contact>3900383669</sh:Contact>
+                <sh:ContactTypeIdentifier>VKN_TCKN</sh:ContactTypeIdentifier>
+            </sh:ContactInformation>
+            <sh:ContactInformation>
+                <sh:Contact>Gelir İdaresi Başkanlığı</sh:Contact>
+                <sh:ContactTypeIdentifier>UNVAN</sh:ContactTypeIdentifier>
+            </sh:ContactInformation>
+        </sh:Sender>
+        <sh:Receiver>
+            <sh:Identifier>urn:mail:defaultgb@gib.gov.tr</sh:Identifier>
+            <sh:ContactInformation>
+                <sh:Contact>9999999999</sh:Contact>
+                <sh:ContactTypeIdentifier>VKN_TCKN</sh:ContactTypeIdentifier>
+            </sh:ContactInformation>
+            <sh:ContactInformation>
+                <sh:Contact>e-Fatura Deneme A.Ş.</sh:Contact>
+                <sh:ContactTypeIdentifier>UNVAN</sh:ContactTypeIdentifier>
+            </sh:ContactInformation>
+        </sh:Receiver>
+        <sh:DocumentIdentification>
+            <sh:Standard>UBL-TR</sh:Standard>
+            <sh:TypeVersion>1.0</sh:TypeVersion>
+            <sh:InstanceIdentifier>c8330dd2-a6df-4335-9ec7-3c62a73a35ca</sh:InstanceIdentifier>
+            <sh:Type>SYSTEMENVELOPE</sh:Type>
+            <sh:CreationDateAndTime>2013-06-19T14:47:58</sh:CreationDateAndTime>
+        </sh:DocumentIdentification>
+    </sh:StandardBusinessDocumentHeader>
+    <ef:Package>
+        <Elements>
+            <ElementType>APPLICATIONRESPONSE</ElementType>
+            <ElementCount>1</ElementCount>
+            <ElementList>
+                <ApplicationResponse xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+                                     xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                     xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2 ../xsd/maindoc/UBLTR-ApplicationResponse-2.0.xsd">
+                    <cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+                    <cbc:CustomizationID>TR1.0</cbc:CustomizationID>
+                    <cbc:ProfileID>UBL-TR-PROFILE-1</cbc:ProfileID>
+                    <cbc:ID>1733aa03-fd87-4303-9a64-0f65a2ec18b5</cbc:ID>
+                    <cbc:UUID>74472467-65e3-4e52-ac9f-ef367e8967fc</cbc:UUID>
+                    <cbc:IssueDate>2013-06-19</cbc:IssueDate>
+                    <cbc:IssueTime>14:47:58</cbc:IssueTime>
+                    <cac:SenderParty>
+                        <cac:PartyIdentification>
+                            <cbc:ID schemeID="VKN">3900383669</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                            <cbc:Name>Gelir İdaresi Başkanlığı</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                            <cbc:StreetName>Yeni Ziraat Mahallesi Etlik Cad. No: 16</cbc:StreetName>
+                            <cbc:CitySubdivisionName>Dışkapı</cbc:CitySubdivisionName>
+                            <cbc:CityName>ANKARA</cbc:CityName>
+                            <cbc:PostalZone>06110</cbc:PostalZone>
+                            <cac:Country>
+                                <cbc:IdentificationCode>TR</cbc:IdentificationCode>
+                                <cbc:Name>Türkiye</cbc:Name>
+                            </cac:Country>
+                        </cac:PostalAddress>
+                    </cac:SenderParty>
+                    <cac:ReceiverParty>
+                        <cac:PartyIdentification>
+                            <cbc:ID schemeID="VKN">9999999999</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PostalAddress>
+                            <cbc:CitySubdivisionName></cbc:CitySubdivisionName>
+                            <cbc:CityName></cbc:CityName>
+                            <cac:Country>
+                                <cbc:IdentificationCode>TR</cbc:IdentificationCode>
+                                <cbc:Name>Türkiye</cbc:Name>
+                            </cac:Country>
+                        </cac:PostalAddress>
+                    </cac:ReceiverParty>
+                    <cac:DocumentResponse>
+                        <cac:Response>
+                            <!-- cbc:ReferenceID = Response ID -->
+                            <cbc:ReferenceID>e31e705d-299c-4c89-825f-06d77bc27763</cbc:ReferenceID>
+                            <!-- S_APR = System application response -->
+                            <cbc:ResponseCode>S_APR</cbc:ResponseCode>
+                            <cbc:Description>SystemApplicationResponse</cbc:Description>
+                        </cac:Response>
+                        <cac:DocumentReference>
+                            <!-- cbc:ID = Zarf ID -->
+                            <cbc:ID>e002da78-223f-438c-addb-16badeb047b5</cbc:ID>
+                            <cbc:IssueDate>2013-06-19</cbc:IssueDate>
+                            <cbc:DocumentTypeCode>SENDERENVELOPE</cbc:DocumentTypeCode>
+                            <cbc:DocumentType>SENDERENVELOPE</cbc:DocumentType>
+                        </cac:DocumentReference>
+                        <cac:LineResponse>
+                            <cac:LineReference>
+                                <!-- cbc:LineID = Giden Zarf.xml satır no -->
+                                <cbc:LineID>0</cbc:LineID>
+                                <cac:DocumentReference>
+                                    <!-- cbc:ID = Zarf ID -->
+                                    <cbc:ID>e002da78-223f-438c-addb-16badeb047b5</cbc:ID>
+                                    <cbc:IssueDate>2013-06-19</cbc:IssueDate>
+                                </cac:DocumentReference>
+                            </cac:LineReference>
+                            <cac:Response>
+                                <!-- cbc:ReferenceID = Line Response ID -->
+                                <cbc:ReferenceID>41a31880-2c87-477b-9c1b-06e299056364</cbc:ReferenceID>
+                                <cbc:ResponseCode>1200</cbc:ResponseCode>
+                                <cbc:Description>BASARIYLA ISLENDI</cbc:Description>
+                            </cac:Response>
+                        </cac:LineResponse>
+                    </cac:DocumentResponse>
+                </ApplicationResponse>
+            </ElementList>
+        </Elements>
+    </ef:Package>
+</sh:StandardBusinessDocument>

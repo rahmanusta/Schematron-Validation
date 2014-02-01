@@ -1,0 +1,25 @@
+Bu dizinde bulunan dosyalarýn açýklamalarý aþaðýda verilmiþtir.
+
+1_TEMEL_FATURA.xml					: Temel fatura örneði. 
+1_TEMEL_FATURA_ZARF.xml				: Temel faturanýn zarfa konmuþ hali. 
+1_SISTEM_YANITI_MERKEZ.xml			: Temel fatura içeren zarfa merkezden gelen durum bilgisini içeren sistem yanýtý zarfý. 
+1_SISTEM_YANITI_POSTA_KUTUSU.xml	: Temel fatura içeren zarfa posta kutusundan gelen durum bilgisini içeren sistem yanýtý zarfý. 
+
+2_TICARI_FATURA.xml					: Ticari fatura örneði.
+2_TICARI_FATURA_ZARF.xml			: Ticari faturanýn zarfa konmuþ hali.
+2_UYGULAMA_YANITI_KABUL.xml			: Gönderilen ticari fatura için kabul uygulama yanýtý. 
+2_UYGULAMA_YANITI_KABUL_ZARF.xml	: Uygulama yanýtýnýn zarfa konmuþ hali. 
+
+3_TICARI_FATURA.xml					: Ticari fatura örneði.
+3_TICARI_FATURA_ZARF.xml			: Ticari faturanýn zarfa konmuþ hali.
+3_UYGULAMA_YANITI_RED.xml			: Gönderilen ticari fatura için red uygulama yanýtý. 
+3_UYGULAMA_YANITI_RED_ZARF.xml		: Uygulama yanýtýnýn zarfa konmuþ hali. 
+
+4_KULLANICI_ACMA.xml				: Kullanýcý açma örneði.
+4_KULLANICI_ACMA_ZARF.xml			: Kullanýcý açma belgesinin zarfa konmuþ hali.
+
+5_KULLANICI_SILME.xml				: Kullanýcý kapatma örneði.
+5_KULLANICI_SILME_ZARF.xml			: Kullanýcý kapatma belgesinin zarfa konmuþ hali. 
+
+6_TEMEL_FATURA_KDV_SIFIR.xml		: KDV oraný sýfýr olan ve vergi istisna muafiyet sebebi yazýlmýþ temel fatura örneði.
+6_TEMEL_FATURA_KDV_SIFIR_ZARF.xml	: KDV oraný sýfýr olan ve vergi istisna muafiyet sebebi yazýlmýþ temel fatura örneðinin zarfa konmuþ hali.
